@@ -1,0 +1,64 @@
+.navbar {
+  display: flex;
+  padding: 20px;
+  margin: 0 auto;
+  border-bottom: 1px solid #d8d8d8;
+  max-width: 600px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a h1 {
+  color: #f1356d;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.links a:active {
+  border-bottom: 2px solid #f01858;
+}
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/*  map posts  */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: solid 1px gray;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #868686;
+}
+
+.blog-preview h2 {
+  font-size: 1.2rem;
+  color: #f01858;
+}
+
+.author {
+  font-weight: 600;
+}
+.author-name{
+  font-style: italic;
+}
