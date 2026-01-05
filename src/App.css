@@ -48,7 +48,7 @@ a {
   padding: 10px;
   border: solid 1px gray;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px #868686;
+  box-shadow: 5px 5px 5px #abababe1;
 }
 
 .blog-preview h2 {
@@ -60,5 +60,5 @@ a {
   font-weight: 600;
 }
 .author-name{
-  font-style: italic;
+  font-style: oblique 20deg;
 }
