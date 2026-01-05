@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 
 function Home() {
   const [blogPosts, setBlogPosts] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   
   const handleDelete = (id) => {
     const newBlog = blogPosts.filter((blog) => blog.id !== id);
@@ -17,7 +18,8 @@ function Home() {
         return res.json();
       })
       .then(data => {
-        setBlogPosts(data)
+        setBlogPosts(data);
+        setIsLoading(false);
       })
       .catch(err => {
         console.error('Error', err)
@@ -26,7 +28,8 @@ function Home() {
   
   return(
     <div className="home">
-     {!blogPosts ? <h1>Loading...</h1> :<BlogList posts={blogPosts} handleDelete={handleDelete} /> }
+     { isLoading && <div className="loading">Loading...</div> }
+     { blogPosts && <BlogList posts={blogPosts} handleDelete={handleDelete} /> }
     </div>
   );
 }
