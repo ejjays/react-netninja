@@ -7,22 +7,22 @@ function useFetch(url) {
   
   useEffect(() => {
     fetch(url)
-      .then(res => {
-        if (!res.ok) {
-          throw new Error(`HTTP status: ${res.status}`)
-        }
-        return res.json();
-      })
-      .then(data => {
-        setData(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error('Error', err.message);
-        setError(err);
-        setLoading(false);
-      })
-  }, []);
+    .then(res => {
+      if (!res.ok) {
+        throw new Error(`HTTP status: ${res.status}`)
+      }
+      return res.json();
+    })
+    .then(data => {
+      setData(data);
+      setLoading(false);
+    })
+    .catch(err => {
+      console.error('Error', err.message);
+      setError(err);
+      setLoading(false);
+    })
+  }, [url]);
   return { data, setData, loading, error }
 }
 
