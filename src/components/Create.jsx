@@ -3,6 +3,7 @@ function Create() {
     <div className="create">
       <h2>New Blog!</h2>
     </div>  
+    
   );
 }
 

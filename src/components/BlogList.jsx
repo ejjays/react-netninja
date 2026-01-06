@@ -1,12 +1,15 @@
 import '../App.css';
+import { Link } from 'react-router';
 
 function BlogList({posts, handleDelete}) {
   return(
     <div className="blog-list">
        {posts.map((blog) => (
       <div className="blog-preview" key={blog.id}>
-        <h2>{blog.title}</h2>
-        <p>{blog.body}</p>
+        <Link to={`/blogs/${blog.id}`}>
+          <h2>{blog.title}</h2>
+          <p>{blog.body}</p>
+        </Link>
         <p><span className="author">Author: </span><span className="author-name">{blog.author}</span></p>
         <button style={ btnStyles } onClick={() => {
           handleDelete(blog.id)

@@ -9,7 +9,7 @@
 }
 
 .navbar a h1 {
-  color: #f1356d;
+  color: rgb(240, 24, 88);
 }
 
 .links {
@@ -61,4 +61,27 @@ a {
 }
 .author-name{
   font-style: oblique 20deg;
+}
+
+/*  blog details  */
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog h1 {
+  font-size: 1.7rem;
+  color: #f01858;
+}
+
+.blog .body {
+  font-size: 2rem;
+}
+.blog .author {
+  font-size: 1.2rem;
+}
+.blog .author .ba {
+  font-weight: 400;
+  text-decoration: underline;
 }
